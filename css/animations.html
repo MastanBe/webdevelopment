@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<body>
+    <style>
+        /* What is animation--- 
+                       shifting from style to other style
+        */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cont{
+           
+            height:800px;
+            width:100%;
+            background-color: antiquewhite;
+        }
+        .box1{
+            position: relative;
+            top:0%;
+            left:34%;
+            height: 70px;
+            border-radius: 10px;
+            width: 350px;
+            background-color:green;
+            /* animation-name: rightMovement;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running; */
+            /*animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] 
+            [animation-direction] [animation-fill-mode] [animation-play-state];*/
+            animation: rightMovement 6s linear 2s infinite normal none paused;
+          
+            
+        }
+        @keyframes  rightMovement {
+            from{
+                top:0%;
+                left:0%;
+            }
+            to{
+                top:0%;
+                left:90%;
+            }
+            
+        }
+        .box2{
+            position: relative;
+            top:50%;
+            left:45%;
+            height:100px;
+            width: 100px;
+            background-color: palevioletred;
+            border-radius: 50px;
+            animation-name: circleMoves;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+            animation-direction:alternate;
+            animation-play-state:paused;
+            animation-fill-mode:initial;
+            
+        }
+        @keyframes circleMoves {
+            from{
+                top:-1%;
+                left:45%;
+            }
+            to{
+                top:70%;
+                left:45%;
+            }
+            
+        }
+        .box3{
+            position: relative;
+            top:70%;
+            left:34%;
+            height: 70px;
+            border-radius: 10px;
+            width: 360px;
+            background-color:green;
+            /* animation-name: leftMovement;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state:running; */
+            animation: leftMovement 6s linear 2s infinite normal none paused;
+        }
+        @keyframes leftMovement {
+            from{
+                top:70%;
+                left:75%;
+            }
+            to{
+                top:70%;
+                left:0%;
+            }
+            
+        }
+    </style>
+    <div class="cont">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>

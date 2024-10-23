@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* html,body{
+            height: 100%;
+            width: 100%;
+        } */
+        
+        body{
+            background-color: antiquewhite;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            display: flex;
+          
+        }
+        nav{
+            /* background-color: aqua; */
+        }
+        
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        footer{
+            /* background-color: blueviolet; */
+        }
+        nav>ul{
+            text-align: end;
+        }
+        footer>ul{
+            text-align: end;
+        }
+        li{
+            display: inline-block;
+            padding: 20px;
+            color: black;
+        }
+        @media (max-width:1000px){
+            .box{
+                flex-direction: column;
+            }
+
+        }
+        @media(min-width:1000px){
+            .box{
+                flex-direction: row;
+            }
+        }
+        /* @media screen and (max-width:500px){
+            nav{
+                background-color: rgb(230, 96, 118);
+            }
+            footer{
+                background-color: rgb(255, 166, 0);
+            }
+            
+        }
+        @media (max-height:300px){
+            body{
+                background-color: rgb(230, 122, 22);
+            }
+        }
+        @media (min-height:300px){
+            body{
+                background-color: aquamarine;
+            }
+        } */
+        
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ratione aperiam aut provident eius. Ea numquam itaque, repellendus vel recusandae quae ducimus, tempora pariatur quasi dolor beatae. Iste iure commodi nostrum facere, qui, laudantium placeat ducimus quos fugit aspernatur quas!</p>
+    
+    </div>
+    <div class="cont" id="box">
+        <div class="box" id="red">red</div>
+        <div  class="box" id="green">green</div>
+        <div  class="box" id="yellow">yellow</div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://chatgpt.com/">ChatGpt</a></li>
+            <li><a href="https://google.com/">Google</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

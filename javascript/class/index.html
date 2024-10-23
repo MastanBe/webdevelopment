@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classes and proptotypes</title>
+  </head>
+  <body>
+    <script src="oops.js"></script>
+    <!-- <H1>proptotypes</H1> -->
+    <!-- <button id="id">Click Here</button> -->
+    <!-- <script>
+        function person(name,position){
+            this.name=name;
+            this.position=position;
+        }
+        function example(name){
+            this.name=name;
+    
+        }
+
+        function Animal(name){
+            this.name=name
+        }
+        Animal.prototype.sound=function(){
+            console.log("animal function");
+        }
+        function Dog(name,color){
+            Animal.call(this,name);
+            this.color=color;
+        }
+        Dog.prototype=Object.create(Animal.prototype);
+        Dog.prototype.bark=function(){
+            console.log("Dog function");
+        }
+ 
+        const dog=new Dog('abc','black');
+        dog.sound();
+        dog.bark()
+        console.log(dog);
+    
+
+    </script> -->
+    <!-- <script>
+      class React {
+        constructor(library, server) {
+          this.library = library;
+          this.server = server;
+          document
+            .querySelector("#id")
+            .addEventListener("click", this.handleClick.bind(this));
+/* The bind method in JavaScript is used to create a new function that, when called, has its this keyword set to a specific value, 
+along with a specified sequence of arguments preceding any provided when the new function is called.
+Essentially, bind allows you to create a new function with a fixed this value,
+which cannot be overridden by subsequent calls to the function.*/
+//bind which take entire current context(lib,server along with event info) to handleclick method
+        }
+        handleClick() {
+          console.log("Button clikced");
+          console.log(this.server);
+        }
+      }
+      const react = new React("react", "https:localhost:3000/app");
+    </script> -->
+    <!-- <script src="prototype.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: flex;
+            border: 1px solid red;
+            margin: 20px;
+            padding: 20px;
+        }
+        #text{
+            border: 1px solid green;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        p{
+            font-size: 40px;
+            font-size: 200;
+            border: 1px solid palevioletred;
+        }
+        img{
+            height:200px;
+            width: 200px;
+            object-fit: cover;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        @media (max-width:640px){
+            .container{
+                flex-direction: column;
+
+            }
+
+        }
+        @media(min-width:640px){
+            .container{
+                flex-direction: row;
+            }
+        }
+        /* div{
+            display: flex;
+            border: 1px solid red;
+        } */
+    </style>
+    <div class="container">
+        <div id="text">
+            <p>Text1</p>
+            <p>Text2</p>
+        </div>
+        <div id="img">
+            <img id="img1" src="https://plus.unsplash.com/premium_photo-1671659205007-2a34bda065de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="cactus">
+        </div>
+    </div>
+</body>
+</html>

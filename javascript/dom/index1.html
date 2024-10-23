@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+      //creating Element
+      const div = document.createElement("div");
+      div.setAttribute("id", "main");
+      div.setAttribute("class", "div");
+      div.style.backgroundColor = "skyblue";
+      div.style.color="green"
+      div.style.padding="10px";
+      div.innerText="code inside the div tag";
+      const text=document.createTextNode("Adding text using createTextNode");//adding text using textnode
+      div.appendChild(text);
+      document.body.appendChild(div);
+      console.log(div);
+      const divElement=document.querySelector('#main');
+      console.log(divElement.childNodes);
+      function addLanguage(langName)
+      {
+        const li=document.createElement('li');
+        li.innerText=langName;
+        document.querySelector('.language').appendChild(li);
+      }
+
+      function addoptiLanguage(langName)
+      {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+
+      }
+      addLanguage("Java");
+      addoptiLanguage("Node Js")
+      addoptiLanguage('Python');
+      const firstElement=document.querySelector('li:first-Child');
+      const secondLement=document.querySelector('li:nth-Child(2)');
+      const lastElement=document.querySelector('li:last-Child');
+
+      //editing
+      lastElement.innerHTML="React Js";
+      console.log(firstElement,secondLement,lastElement);
+
+      //removing
+      secondLement.remove();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+img{
+    animation: movement 5s linear 1s  infinite alternate ;
+    
+}
+a{
+    font-size: 20px;
+    color: #000;
+    border: 1px solid white;
+    background-color: white;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 100px auto;
+    padding: 20px;
+    text-decoration-line:none ;
+    
+}
+ul li{
+    list-style-type: square;
+}
+@keyframes movement {
+    from{
+        top:0%;
+        left:0%;
+    }
+    to{
+        top:0%;
+        left:100%;
+    }
+    
+}

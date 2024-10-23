@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Validation</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="number" />
+
+    <button type="button" id="submit">Submit</button>
+
+    <p id="demo"></p>
+    <!-- validating number-->
+    <script>
+      document.getElementById("submit").addEventListener("click", function () {
+        const number = document.getElementById("number").value;
+        let text;
+        if (isNaN(number) || number < 1 || number > 10) {
+          text="enter in between 1 and 10";
+        } else {
+          text="Valid number";
+        }
+        document.getElementById('demo').innerHTML=text;
+      });
+    </script>
+  </body>
+</html>

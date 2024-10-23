@@ -1,0 +1,44 @@
+
+body
+{
+    background-color:cornflowerblue;
+}
+h1{
+    
+    border-top: 10px dashed darkblue;
+    border-left: 10px solid darkorange;
+    border-right: 10px solid maroon;
+    border-bottom: 10px dotted darkmagenta;
+  
+    font-size: 100px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: chartreuse;
+}
+#p1
+{
+    color: black;
+
+}
+.para{
+    color:aqua;
+}
+#p2
+{
+    color:#115555;
+
+}
+#p3{
+    color:rgb(150,350,45);
+}
+#p4{
+    color:hsl(323, 81%, 27%);
+}
+h2{
+    text-shadow: 29px 10px 5px blue ,-40px -10px 5px red ;
+    font-size: 50px;
+}
+#box
+{
+    box-shadow: 50px 10px 100px red ,-50px -10px 100px yellow ;
+}

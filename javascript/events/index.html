@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Events</title>
+</head>
+<body >
+   
+    <form id="form">
+        <label for="email">Email : </label>
+        <!-- the required attribute prevents this form from being submitted without the email-->
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="password">Password : </label>
+        <input type="password" name="password" id="password">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <p class="para">this is a pargraph</p>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('#form').addEventListener('submit',function(event){
+                const email=document.querySelector('#email').value;
+                if(email==='')
+                {
+                    alert('Enter email id');
+                    event.preventDefault();// it prevents the submision of form if the email is empty by providing alert message
+                    console.log(event);
+                }
+            })
+            
+        })
+
+    </script>
+     <script src="app.js"></script> 
+    
+</body>
+</html>
+

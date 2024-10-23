@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <form >
+            <label for="height">Height :</label>
+            <input type="text" name="height" id="height">
+            <br><br>
+            <label for="weight">Weight:</label>
+            <input type="text" name="weight" id="weight">
+            <br><br>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <div id="results"></div>
+    <div id="info">
+        <!-- <p id="underweight">Bmi lessthan 18.5 is <u>underweight</u></p>
+        <p id="normalweight">Bmi in between 18.5 and 24.9 is <u>normal Weight</u> </p>
+        <p id="overweight">Bmi in between 25 and 29.9 is <u> over Weight</u></p>
+        <p id="Obesity">Bmi morethan 30 is <u>obesity</u></p>  -->
+        <p id="bmi"></p>
+    </div>
+    <script >
+        const form=document.querySelector('form');
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            const heightCm=parseInt(document.querySelector('#height').value);
+            const weight=parseInt(document.querySelector('#weight').value);
+            const heightM=heightCm/100;
+            const results=document.querySelector('#results');
+            if(isNaN(heightM)||height<=0|| height===''){
+                results.innerHTML="Invalid Height";
+                return;
+            }
+            if(isNaN(weight)||weight<=0||weight==='')
+            {
+                results.innerHTML="Invalid weight";
+                return;
+            }
+            const BMI=(weight/(heightM*heightM)).toFixed(2);
+            results.innerHTML = `Your BMI is ${BMI}`;
+            let interpretation='';
+            if (BMI< 18.5) {
+                interpretation = 'underweight';
+            } else if (BMI >= 18.5 && BMI <= 24.9) {
+                interpretation = 'normal weight';
+            } else if (BMI>= 25 && BMI <= 29.9) {
+                interpretation = 'overweight';
+            } else {
+                interpretation = 'obesity';
+            }
+            console.log(interpretation);
+            document.querySelector('#bmi').innerText = `BMI Category: ${interpretation}`;
+        })
+        
+    </script>
+</body>
+</html>

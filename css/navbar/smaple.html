@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .form {
+            /* border: 3px solid black; */
+            margin: 20px;
+            height: 500px;
+            width: 500px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        input[type=text] {
+            height: 40px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            border-radius: 8px;
+            border: 1px solid #4CAF50;
+            width: 100%;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+
+        input[type=submit]:hover {
+            background-color: green;
+        }
+        h1{
+            font-size: 20px;
+            color: black;
+            position: relative;
+            margin: 20px;
+            left: 4%;
+        }
+        .selectConatiner{
+            display: flex;
+            justify-content: start;
+            position: relative;
+            /* background-color: aqua; */
+            gap: 60px;
+            left: 0px;
+        }
+        .selectConatiner select{
+            border: 1px solid black;
+            /* margin: 70px; */
+            height: 40px;
+            width: 75%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin: 10px 0px;
+            padding: 10px;
+
+        }
+    </style>
+    <h1>Using CSS to style an HTML Form</h1>
+    <div class="form">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" required placeholder="Your name..">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" required placeholder="Your last name..">
+        <label for="country">Country</label>
+        <div class="selectConatiner">
+            <select name="country" id="country"></select>
+            <img src="https://flagsapi.com/IN/flat/64.png" alt="USA Flag">
+        </div>
+        <input type="submit"></input>
+    </div>
+    <script src="code.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

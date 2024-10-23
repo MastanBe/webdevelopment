@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data validating</title>
+  </head>
+  <body style="background-color: #100c13; color: #fff;">
+    <h2>Registration form</h2>
+    <form id="form">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username"  required/>
+      <span id="usernameerror"></span>
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
+      <span id="emailerror"></span>
+      <br /><br />
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" />
+      <span id="passworderror"></span>
+      <br /><br />
+      <label for="confirmpassword">Confirmpassword:</label>
+      <input type="password" name="confirmpassword" id="confirmpassword" />
+      <span id="confirmpassworderror"></span>
+      <br /><br />
+      <input type="submit" value="Register" />
+    </form>
+    <script>
+      document.getElementById("form").addEventListener("submit", function (event) {
+        document.getElementById("usernameerror").textContent = "";
+        document.getElementById("emailerror").textContent = "";
+        document.getElementById("passworderror").textContent = "";
+        document.getElementById("confirmpassworderror").textContent = "";
+        let valid = true;
+
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =document.getElementById("confirmpassword").value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailFormat=/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9._]+.[a-zA-Z0-9]/;
+        if (username === "") {
+          document.getElementById("usernameerror").textContent ="username is required";
+          valid = false;
+        }
+        if(email===''){
+            document.getElementById("emailerror").textContent = "email is requird"; 
+            valid = false;
+        }
+        else if(!emailPattern.test(email)){
+            document.getElementById("emailerror").textContent = "Invalid email format";
+            valid = false;
+        }
+        if(password==='')
+        {
+            document.getElementById("passworderror").textContent = "password is required"; 
+            valid = false;
+        }
+        else if(password.length<6){
+            document.getElementById("passworderror").textContent = "password should be greater than 6";
+            valid = false;
+        }
+        if(confirmPassword!==password)
+        {
+            document.getElementById("confirmpassworderror").textContent = "confirmpassword is not matching with password";
+            valid = false;
+        }
+        if(!valid){
+            event.preventDefault();
+
+        }
+        
+        
+      });
+    </script>
+  </body>
+</html>

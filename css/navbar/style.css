@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: end ;
+    border: 1px solid saddlebrown;
+    /* background-color: #333; */
+}
+li{
+   
+    display: inline-block;
+    padding: 20px;
+}
+li a{
+    text-decoration: none;
+    /* border: 1px solid green; */
+    padding: 5px;
+    color: black;
+    /* background-color:#04AA6D; */
+}
+li a:visited{
+    border: 1px solid green;
+    background-color:#04AA6D; 
+
+}
+li a:hover:not(:visited){
+    color: #fff;
+    border: 1px solid green;
+    background-color:#333;
+
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+       
+
+        .container{
+            height: 800px;
+            background-color:beige;
+            border: 5px solid black;
+            display: flex;
+            /* flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse; */
+            flex-flow: row wrap;
+            /* flex-direction:row; */
+            /* justify-content:center; */
+            align-items: start;
+            align-content:space-around;
+    
+            
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            padding: 2px;
+            margin: 2px;
+        }
+        #box1{
+            background-color: #e9516a;
+            /* flex-basis: 100px; */
+        }
+        #box2{
+            background-color: #4400ff;
+            /* flex-basis: 200px; */
+          
+        }
+        #box3{
+            background-color: #008000b9;
+            /* flex-grow: 3; */
+            /* flex-shrink: 5; */
+            /* flex-basis: 500px; */
+            /* flex: 1;  */
+            /* flex-grow, flex-shrink, and flex-basis combined */
+        }
+        /* flex --- displays content side by side*/
+        /* justify content ---changes in width*/
+        /*  align-items ----changes in height*/
+        /* .container{
+            background-image: url("flexbox.png");
+            background-size: cover;
+            background-position: left;
+            display: flex;
+            justify-content: s;
+            align-items:center;
+            position: relative;
+            height: 800px;
+            width: 800px;
+            background-color: bisque;
+          
+        } */
+        /* #box1{
+            position:absolute;
+            top: 40%;
+            left: 40%;
+            height:100px;
+            width: 190px;
+            background-color: purple;
+            transform: translate(-50%,-50%);
+        }
+        #box2{
+            position:absolute;
+            height:110px;
+            width: 170px;
+            background-color: #008020;
+            transform: translate(-50%,-50%);
+        }
+        #box3{
+            position: absolute;
+            height:120px;
+            width: 150px;
+            background-color: #170080;
+            transform: translate(-50%,-50%);
+        } */
+    </style>
+</body>
+</html>

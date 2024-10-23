@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box & Text Shadow</title>
+    <style>
+        /*global variables*/
+        :root{
+            --color:grey;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .cont{
+            height: 600px;
+            width: 400px;
+            background-color: beige;
+            margin: 20px;
+            border: 1px solid red;
+
+        }
+        p{
+            margin: 30px;
+        }
+        h1{
+            /* text-shadow: 50px 10px rgb(218, 55, 82); */
+            /* text-shadow: rgb(0, 255, 85) 20px 40px; */
+            text-shadow: 30px 10px 1px  green;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            object-position: bottom;
+            /* box-shadow: 80px 20px 1px blue; */
+        }
+        #box{
+            /* local varaibles */
+            --grayColor:gray;
+            --blackColor:black;
+            height:100px;
+            width: 100px;
+            margin: 20px;
+            background-color: hsl(300, 87%, 56%);
+            /* box-shadow: 10px 5px gray; */
+            /* box-shadow: 15px 10px 5px black; */
+            /* box-shadow: 15px 10px 5px 10px black; */
+            box-shadow: 10px 10px 1px var(--grayColor),20px 20px 1px var(--blackColor);
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Heading One</h1>
+        <p>paragraph</p>
+        <img id="img1" src="https://plus.unsplash.com/premium_photo-1671659205007-2a34bda065de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="cactus">
+         <div id="box"></div>
+    </div>
+    
+</body>
+</html>

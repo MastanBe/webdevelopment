@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KeyBoard Events</title>
+  </head>
+  <body>
+    <p id="p">
+        When you leave the input field, a function transforms the input to upper
+        case.
+      </p>
+    Enter your name: <input type="text" id="fname" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, facilis
+      veniam. Modi nesciunt cupiditate nisi nulla incidunt aspernatur doloribus
+      cumque molestias libero quam! Commodi, eaque tempore molestias iusto neque
+      tenetur est ex necessitatibus minima sapiente temporibus earum
+      voluptatibus dicta amet expedita, pariatur fugit aliquam nisi rerum nam.
+      Ad eos illo, distinctio quos quis ipsa voluptatibus repellat assumenda
+      accusamus sunt quaerat, labore inventore. Suscipit adipisci inventore
+      voluptates quia aperiam iusto nostrum vero amet ex deleniti est neque
+      soluta aut deserunt, temporibus dignissimos cumque ratione accusantium
+      voluptas quae excepturi placeat. Id ut ullam fugit dolorum? Beatae fugit
+      voluptates in consectetur, iusto repudiandae. Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Mollitia odit velit culpa ducimus harum non
+      ab eius aut adipisci, ad labore. Sint officia esse delectus saepe eos!
+      Omnis beatae sit laborum, natus dicta, voluptatum dolorem unde quasi
+      blanditiis quibusdam at laboriosam quaerat fugiat incidunt distinctio n
+      ihil soluta delectus, maxime iste laudantium. Itaque pariatur sint cum
+      blanditiis ipsam quis , maiores non nobis doloribus error mollitia iste,
+      facilis rem placeat numquam atque delectus eveniet dolore earum commodi
+      et? Nobis architecto doloribus autem aliquid iure unde natus dicta maxime,
+      consectetur id nam quam illum tempora nesciunt consequatur, libero,
+      molestias deserunt numquam sed blanditiis rerum expedita. Exercitationem
+      nobis possimus, nam laborum nisi consequuntur? Perspiciatis minus expedita
+      impedit asperiores distinctio aut inventore ut repellendus sed eaque
+      neque, dicta officiis vero ipsa veritatis adipisci quas officia et odit
+      doloremque porro dignissimos fuga. Et est eum asperiores possimus adipisci
+      debitis molestias nesciunt facere doloremque corrupti cumque molestiae
+      corporis, voluptates soluta nobis blanditiis eius mollitia eaque quidem
+      assumenda culpa a magnam. Laudantium voluptates tenetur necessitatibus
+      voluptatem dolores, error recusandae incidunt nulla quis illo nemo eum
+      explicabo facere labore quas dicta exercitationem provident, cupiditate
+      animi. Corrupti cupiditate, eveniet quia culpa aspernatur molestiae
+      magnam. Ex atque maiores numquam optio reprehenderit cupiditate laborum
+      repellendus porro blanditiis non quos possimus id officiis ad,
+      voluptatibus, obcaecati beatae? Reiciendis debitis harum dolor
+      exercitationem repellendus libero dignissimos laudantium quis. Omnis
+      numquam neque odit cupiditate quia animi repellat et eius reprehenderit,
+      facilis quis iste id rem ea veritatis aperiam non iusto repellendus at.
+      Voluptate dolores illum expedita, maiores veritatis incidunt saepe in
+      laborum eligendi, dignissimos tempora, accusantium temporibus quis.
+      Quaerat, minus, sit facilis eveniet iure ipsa pariatur maxime eius
+      distinctio veniam et. Ad fugit aliquid ullam incidunt, eum quos sed iste,
+      eos aspernatur dolor, distinctio quisquam dolore cumque aut fuga
+      voluptatibus? Voluptates, ab veniam optio et error vitae obcaecati dolorem
+      voluptatibus eum! Officiis debitis dolore minima ullam consequuntur quod
+      suscipit repudiandae cumque a alias aspernatur dolores sit voluptatum
+      assumenda iure atque non nemo, vero rem est earum nostrum asperiores sed
+      nesciunt! Ducimus hic labore nulla totam ex consequatur minus, iure
+      architecto, praesentium aspernatur voluptates necessitatibus, reiciendis
+      ipsum laboriosam temporibus eos magni molestias! Maiores vel excepturi sit
+      illum earum nihil maxime iste minima recusandae laboriosam nisi
+      perspiciatis ea accusantium libero dicta deleniti, aspernatur nesciunt
+      soluta tenetur eaque atque officia? Perferendis eligendi, eaque natus id,
+      non possimus aliquam quasi harum voluptatem incidunt cumque? Fugiat,
+      deserunt quos? Totam, illum?
+    </p>
+
+    
+    <script>
+      document
+        .getElementById("fname")
+        .addEventListener("keyup", function (event) {
+          console.log(`Key Released: ${event.key}`);
+        });
+      window.addEventListener("scroll", function () {
+        console.log(`Scrolled to: ${window.scrollY}`);
+      });
+          document.getElementById('fname').addEventListener('keydown', function(event) {
+          console.log(`Key pressed: ${event.key}`);
+      });
+      document.getElementById('p').addEventListener('focus', function(event) {
+        const p=document.getElementById('p');
+        p.style.backgroundColor='yellow';
+      });
+
+    </script>
+  </body>
+</html>

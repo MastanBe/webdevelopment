@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        border: 5px solid;
+        display: flow-root; /*anything which comes outside the border will be placed inside*/
+      }
+      div{
+        border:10px dotted;
+      }
+      .box {
+        background-color: red;
+        color: aqua;
+        border: 10px dashed;
+      }
+      #box1 {
+        height: 100px;
+        width: 100px;
+        float: left; /* Inorder make text or anything wrap around it (or) f
+                       float allows other elements to flow around it */
+        margin-right: 30px;
+      }
+      #box2 {
+        height: 100px;
+        width: 100px;
+        float: right;
+
+        margin-bottom: 30px;
+      }
+    </style>
+    <div class="box" id="box1">Box1</div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde enim
+      qui deserunt molestias officiis dolore earum recusandae quo, natus sunt
+      similique ducimus. Inventore possimus illo vel tenetur accusantium magnam
+      et rem incidunt assumenda, perferendis est nobis, dolorem minus
+      voluptatem, odio repudiandae! Officiis corrupti, soluta modi dolorem eius
+      at ex debitis molestias fuga beatae quod, quas ea quisquam quos! Iusto
+      harum nemo eum assumenda molestiae impedit fugit animi amet officiis
+      voluptatum provident dolores vitae, labore facilis architecto illum
+      voluptas quo voluptates esse neque itaque? Laudantium reprehenderit, dolor
+      veniam est sed tempora, sapiente odit dignissimos doloremque dolores esse
+      suscipit earum quaerat.Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Placeat amet animi eligendi? Vero quas minus nostrum cupiditate
+      doloremque quibusdam autem, iure ad quia maiores necessitatibus nobis
+      quasi nulla amet at dolorem ipsa dignissimos vitae ratione. Praesentium,
+      reiciendis hic neque facere quaerat dolor. Dicta obcaecati iusto optio
+      exercitationem ducimus excepturi doloribus!
+    </p>
+    <div class="box" id="box2">Box2</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet
+      animi eligendi? Vero quas minus nostrum cupiditate doloremque quibusdam
+      autem, iure ad quia maiores necessitatibus nobis quasi nulla amet at
+      dolorem ipsa dignissimos vitae ratione. Praesentium, reiciendis hic neque
+      facere quaerat dolor. Dicta obcaecati iusto optio exercitationem ducimus
+      excepturi doloribus!
+    </p>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+        optio nisi dolores modi aperiam consequuntur sit earum in, voluptatum
+        est, suscipit at quae iure dolorum molestiae natus quasi itaque tenetur
+        error rerum recusandae non nihil ab? Ipsum voluptate quas est sequi
+        ducimus, omnis placeat doloribus alias provident, cupiditate itaque unde
+        quos odio quidem! Ratione placeat quisquam, at voluptatum mollitia et
+        id! Inventore reiciendis maxime magni dolore repellat voluptatum, iste
+        magnam tempore odit nam ab nisi placeat nemo excepturi quae cupiditate
+        deleniti id doloribus error praesentium eligendi quisquam delectus omnis
+        aut. Excepturi autem, laborum adipisci minus eligendi deleniti eos
+        voluptas doloribus.
+      </p>
+    </div>
+  </body>
+</html>

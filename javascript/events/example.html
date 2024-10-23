@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <p>Inside div tag</p>
+        <h1 id="h1">Heading one</h1>
+
+    </div>
+   
+    <script>
+        const student={
+            fullName:"mastan be",
+            qualification:"BTech",
+            marks:94.4,
+            printMarks:function(){
+                console.log(`Marks: ${this.marks}`);
+            }
+        }
+
+        //different methods related to the events
+        document.getElementById('h1').addEventListener('click',function(e){
+            console.log(`target : ${e.target}`);//what is the target
+            console.log(`currentTarget : ${e.currentTarget}`);//same as target
+            console.log(`timestamp : ${e.timeStamp}`);//when the event oocurs
+            console.log(`type: ${e.type}`);//what type of event it is
+            console.log(`clientx :${e.clientX}`);//the horizantal spacing in client
+            console.log(`clienty :${e.clientY}`);//vertical'''''
+            console.log(`screenx: ${e.screenX}`);//screening occupied in horizantal
+            console.log(`screeny:${e.screenY}`);//vertical
+            console.log(`altkey :${e.altKey}`);//checking whether the alt key is pressed or not it give boolean as output
+            console.log(`shiftkey :${e.shiftKey}`);//checking whenter the shiftkey is pressed or not it give boolean as output
+            console.log(`ctrlkey: ${e.ctrlKey}`);//checking whenther the ctrlkey is pressed or not it gives boolean as output
+            e.stopPropagation;// to stop propagation(bubbling === false default or capturing=== true we need to set manually )
+
+        })
+    </script>
+</body>
+</html>

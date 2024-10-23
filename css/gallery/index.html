@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Editor</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: beige;
+        font-family:'Times New Roman', Times, serif ;
+      }
+      .container {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(30, 32, 36);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+      }
+      .leftBox {
+        height: 50%;
+        width: 30%;
+        border: 2px solid white;
+        color: rgb(241, 225, 225);
+        margin: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .leftBox h1,p{
+        padding: 10px;
+      }
+      .rightBox {
+        height: 50%;
+        width: 60%;
+        border: 2px solid white;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+       
+        
+      }
+      .item{
+        background-color: lightblue;
+        border: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        overflow-x: auto;
+        /*animation: animationName duration timingFunction delay iterationCount direction fillMode playState;*/
+        animation: position 5s linear 0s 2 alternate ;
+        transition: all 2s;
+      }
+      .row-2{
+        grid-row: span 2;
+      }
+      .col-2{
+        grid-column: span 2;
+      }
+      /* .img1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      .img2{
+        grid-column: 2/4;
+        grid-row: 1/2;
+      }
+      .img3{
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      .img4{
+        grid-column: 3/4;
+        grid-row: 2/4;
+      }
+      .img5{
+        grid-column: 1/3;
+        grid-row: 3/4;
+      }
+      .img6{
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+      .img7{
+        grid-column: 2/4;
+        grid-row: 4/5;
+      } */
+      /* .rightBox .item {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+      } */
+       @keyframes position{
+        0%{
+            background-position: top;
+        background-color: #999;
+        cursor: pointer;
+        box-shadow: 5px 5px 2px black;
+        border-radius: 50px;
+        }
+        50%{
+            background-position: center;
+        background-color: #999;
+        cursor: pointer;
+        box-shadow: 5px 5px 2px black;
+        border-radius: 50px;
+        }
+        100%{
+            background-position: bottom;
+        background-color: #999;
+        cursor: pointer;
+        box-shadow: 5px 5px 2px black;
+        border-radius: 50px;
+        }
+       }
+       .item:hover{
+        transform: scale(1.2,1.2);
+        background-position: top;
+        background-color: #999;
+        cursor: pointer;
+        box-shadow: 5px 5px 2px black;
+        border-radius: 50px;
+       }
+    </style>
+    <div class="container">
+      <div class="leftBox">
+        <h1>My Portfolio</h1>
+        <p>
+          Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Impedit obcaecati fugit a explicabo, aliquid totam
+          architecto sit beatae mollitia dolores? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Necessitatibus cupiditate aliquam rerum?
+          Deserunt eaque odit totam voluptatem, a odio incidunt quam unde ea
+          recusandae ab, accusamus harum optio facere veritatis quasi obcaecati
+          officia alias ut fugiat debitis inventore! Rerum culpa eligendi
+          quibusdam hic repellendus dolores doloribus ab aliquid officiis optio!
+          amet consectetur adipisicing elit. Iure, maiores?
+        </p>
+      </div>
+      <div class="rightBox">
+        <div class="item img1 row-2" style="background-image: url(images/waterfalls.jpg);">Waterfalls
+            <!-- <img src="images\waterfalls.jpg" alt="Waterfalls"> -->
+        </div>
+        <div class="item img2 col-2" style="background-image: url(images/hills.jpg);">Hills
+            <!-- <img src="images/hills.jpg" alt="Hills"> -->
+        </div>
+        <div class="item img3" style="background-image: url(images/ocean.jpg);">Ocean
+            <!-- <img src="images/ocean.jpg" alt="Ocean"> -->
+        </div>
+        <div class="item img4 row-2" style="background-image: url(images/rain.jpg);">Rain
+            <!-- <img src="images/rain.jpg" alt="Rain"> -->
+        </div>
+        <div class="item img5 col-2" style="background-image: url(images/mountain.jpg);">Mountains
+            <!-- <img src="images/mountain.jpg" alt="Mountains"> -->
+        </div>
+        <div class="item img6" style="background-image: url(images/trees.jpg);">Trees
+            <!-- <img src="images/trees.jpg" alt="Trees"> -->
+        </div>
+        <div class="item img7 col-2" style="background-image: url(images/beach.jpg);">Beach
+            <!-- <img src="images/beach.jpg" alt="Beach"> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .h1
+        {
+            color:red;
+        }
+        .highlight{
+            color: green;
+        }
+        .load
+        {
+            color:blue;
+        }
+        .mouseover
+        {
+            color: rgb(245, 96, 121);
+        }
+        .mouseout
+        {
+            color: rgb(236, 236, 38);
+        }
+        .mouseenter{
+            color:grey;
+        }
+        .mouseleave{
+            color: blueviolet;
+        }
+        .dblclick{
+            color:orange;
+
+        }
+        .rightclick{
+            color: rgb(112, 179, 218);
+        }
+    </style>
+    <h1 id="h1" class="h1">Heading one</h1>
+    <h2 id="h2">Heading two</h2>
+    <h3 id="h3">Heading three</h3>
+    <h4 id="h4">Heading four</h4>
+    <h5 id="h5">Heading five</h5>
+    <script>
+        document.getElementById('h1').addEventListener('click',function (event) {
+            const text=document.getElementById('h1');
+            text.innerText="text updated by clicking";
+            text.classList.toggle('highlight');
+            
+        })
+        window.addEventListener('load',function (event) {
+            const ele=document.createElement('h1');
+            ele.innerText="Context when page loaded";
+            ele.classList.add('load');
+            document.body.appendChild(ele); 
+        })
+        document.getElementById('h2').addEventListener('mouseover',function(){
+            const text=document.getElementById('h2');
+            text.innerHTML="Mouse Over";
+            text.classList.toggle('mouseover');
+
+        })
+        const out=document.getElementById('h2');
+        out.addEventListener('mouseout',function(event) {
+            out.innerHTML="Mouse Out";
+            out.classList.toggle('mouseout')
+            
+        })
+        document.getElementById('h3').addEventListener('mouseenter',function(){
+            const text=document.getElementById('h3');
+            text.innerHTML="Mouse Enter";
+            text.classList.toggle('mouseenter');
+
+        })
+        document.getElementById('h3').addEventListener('mouseleave',function(){
+            const text=document.getElementById('h3');
+            text.innerHTML="Mouse Leave";
+            text.classList.toggle('mouseleave');
+
+        })
+        document.getElementById('h4').addEventListener('dblclick',function(){
+            const text=document.getElementById('h4');
+            text.innerHTML="Double Click";
+            text.classList.toggle('dblclick');
+
+        })
+        document.getElementById('h5').addEventListener('contextmenu',function(){
+            const text=document.getElementById('h5');
+            text.innerHTML="Right Click";
+            text.classList.toggle('rightclick');
+
+        })
+    </script>
+    <!-- <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px
+    ;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" 
+    onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Mouse Over Me'">Thank You</div> -->
+    
+</body>
+</html>

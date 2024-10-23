@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <a href="https:google.com">Google</a> 
+    </div>
+    <p>
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque id asperiores velit amet obcaecati accusantium mollitia autem quasi earum incidunt ullam illum ea, quaerat nulla neque itaque commodi! Voluptate hic aperiam ipsum nobis blanditiis similique a eius, dolore magni cum consectetur suscipit aliquid! Mollitia eius reiciendis asperiores nisi excepturi ex!
+    </p>
+    <ul>
+        <li>item- 1</li>
+        <li>item- 2</li>
+        <li>item- 3</li>
+        <li>item- 4</li>
+        <li>item- 5</li>
+        <li>item- 6</li>
+        <li>item- 7</li>
+        <li>item- 8</li>
+        <li>item- 9</li>
+        <li>item- 10</li>
+    </ul>
+    <ul>
+        <li>item2 --1</li>
+        <li>item2 --2</li>
+        <li>item2 --3</li>
+        <li>item2 --4</li>
+        <li>item2 --5</li>
+        <li>item2 --6</li>
+        <li>item2 --7</li>
+        <li>item2 --8</li>
+        <li>item2 --9</li>
+        <li>item2 --10</li>
+    </ul>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        .container{
+            height: 200px;
+            width: 200px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            margin: 20px;
+
+        }
+       a{
+            /* border: 1px solid black; */
+            font-size: 25px;
+            font-weight: 400;text-align: center;
+            margin: 150px;
+            padding: 20px;
+            color:blue;
+            text-decoration-line:underline;
+            text-decoration-color:rgb(205, 205, 233) ;
+        }
+        p{
+            margin: 20px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        p::first-letter{
+            color: red;
+            font-size: 20px;
+        }
+        p::first-line{
+            color: blue;
+        }
+        p::before{
+            content: 'Pargraph is added using before pseudo element';
+
+        }
+        p::selection{
+            color: green;
+        }
+        p::after{
+            content:'important';
+            background-color: white;
+            color: red;
+        }
+        /* ul li:first-child{
+            background-color: rgb(179, 16, 16);
+        }
+        ul li:last-child{
+            background-color: gray;
+        }
+        ul li:nth-child(2){
+            background-color: green;
+        }
+        /*nth-child(an+b)*/
+        /*ul li:nth-child(3n){
+            background-color: blue;
+        } */
+        a:link{
+            color:black;
+        }
+        a:visited{
+            color:green;
+        }
+        a:hover{
+            color: rebeccapurple;
+        }
+        a:active{
+            color: blue;
+        }
+    </style>
+    
+    <!-- <script>
+        const p=document.querySelector('a');
+        p.addEventListener('click',(e)=>{
+            e.preventDefault();
+            const value=p.target.valueOf();
+            console.log(`Mouse hovering `);
+        })
+    </script> -->
+   
+</body>
+</html>

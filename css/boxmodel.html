@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        ul{
+            text-align: end;
+            padding: 1rem;
+            background-color: hsl(300, 3%, 19%);
+            color: #fff;
+            margin: 20px;
+
+            
+        }
+        li{
+           
+            font-size: 20px;
+            font-weight: 900;
+            padding: 20px;
+            display: inline-block;
+
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border:20px solid rgb(0, 255, 191);
+            padding: 30px;/*seperate contenet from the border*/
+            margin: 40px;/*seperates from other element*/
+           
+        }
+        span{
+            display: inline-block;
+            margin: 40px;
+            padding: 10px;
+            background-color: antiquewhite;
+            color: green;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <span>span tag is inline by default if apply margin is appliled for right left only.</span>
+</body>
+</html>

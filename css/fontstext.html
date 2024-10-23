@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text & Font Properties in CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    /><!-- adding google fonts using link tag-->
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        /*adding google font using import in style tag*/
+      body{
+        font-family: "Dancing Script", cursive;
+      }  
+      h1 {
+        color: transparent;
+        text-shadow: 8px 4px 4px red, 16px 4px 1px blue;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 800;/* boldness of the font*/
+        font-style: normal;
+        text-indent: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        text-decoration: dashed;
+        text-decoration-line: overline;
+        text-decoration-color: aqua;
+        letter-spacing: 5px;
+        word-spacing: 40px;
+        line-height: 40px;
+      }
+    </style>
+    <h1>Heading one</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+      dolor, sit amet consectetur adipisicing elit. Consequatur sunt, voluptatem
+      necessitatibus quae nesciunt ullam! Expedita fugit cum reprehenderit
+      soluta debitis laboriosam a esse eligendi tempore autem? Veniam iusto
+      deleniti quisquam quidem molestias nesciunt commodi obcaecati natus minus
+      aliquid, perferendis doloremque autem sint, ipsum molestiae asperiores
+      facilis amet deserunt dicta.Saepe, hic?
+    </p>
+  </body>
+</html>
